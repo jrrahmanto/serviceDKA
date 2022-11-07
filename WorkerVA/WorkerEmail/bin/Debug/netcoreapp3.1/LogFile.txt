@@ -1,0 +1,201 @@
+2022-04-11 12:12:42.893 +07:00 [INF] Starting Services
+2022-04-11 12:12:53.844 +07:00 [INF] Worker running at: "2022-04-11T12:12:53.8371758+07:00"
+2022-04-11 12:12:53.850 +07:00 [INF] Sukses
+2022-04-11 12:14:02.560 +07:00 [INF] Starting Services
+2022-04-11 12:16:33.680 +07:00 [INF] Starting Services
+2022-04-11 12:18:00.288 +07:00 [INF] Starting Services
+2022-04-11 12:19:12.224 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-04-11T12:19:12.2135521+07:00"
+2022-04-11 12:19:28.985 +07:00 [INF] Starting Services
+2022-04-11 12:19:41.978 +07:00 [INF] Starting Services
+2022-04-11 12:20:21.765 +07:00 [INF] Worker running at: "2022-04-11T12:20:21.7584317+07:00"
+2022-04-11 12:20:21.769 +07:00 [INF] Sukses
+2022-04-11 12:20:23.382 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-04-11T12:20:23.3827452+07:00"
+2022-04-11 15:15:18.031 +07:00 [INF] Starting Services
+2022-04-11 15:15:43.941 +07:00 [INF] Worker running at: "2022-04-11T15:15:43.9337589+07:00"
+2022-04-11 15:15:43.944 +07:00 [INF] Sukses
+2022-04-11 15:18:18.554 +07:00 [INF] Worker Eror : The operation has timed out. "2022-04-11T15:18:18.5546606+07:00"
+2022-04-11 15:23:33.922 +07:00 [INF] Starting Services
+2022-04-11 15:24:00.499 +07:00 [INF] Starting Services
+2022-04-11 15:24:43.041 +07:00 [INF] Worker running at: "2022-04-11T15:24:43.0271719+07:00"
+2022-04-11 15:24:43.049 +07:00 [INF] Sukses
+2022-04-11 15:24:44.491 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-04-11T15:24:44.4915616+07:00"
+2022-04-11 15:26:02.621 +07:00 [INF] Starting Services
+2022-04-11 15:26:42.014 +07:00 [INF] Starting Services
+2022-04-11 15:27:28.624 +07:00 [INF] Worker running at: "2022-04-11T15:27:26.8696894+07:00"
+2022-04-11 15:27:28.628 +07:00 [INF] Sukses
+2022-04-11 15:27:30.129 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-04-11T15:27:30.1288348+07:00"
+2022-04-11 15:28:25.402 +07:00 [INF] Worker running at: "2022-04-11T15:28:25.4018546+07:00"
+2022-04-11 15:28:25.402 +07:00 [INF] Sukses
+2022-04-11 15:28:27.690 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-04-11T15:28:27.6906544+07:00"
+2022-04-11 15:29:19.960 +07:00 [INF] Worker running at: "2022-04-11T15:29:19.9602614+07:00"
+2022-04-11 15:29:19.960 +07:00 [INF] Sukses
+2022-04-11 15:29:21.620 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-04-11T15:29:21.6202892+07:00"
+2022-04-11 15:30:14.011 +07:00 [INF] Worker running at: "2022-04-11T15:30:14.0079958+07:00"
+2022-04-11 15:30:15.092 +07:00 [INF] Sukses
+2022-04-11 15:30:40.544 +07:00 [INF] Starting Services
+2022-04-11 15:30:50.454 +07:00 [INF] Worker running at: "2022-04-11T15:30:50.4448602+07:00"
+2022-04-11 15:31:01.864 +07:00 [INF] Sukses
+2022-04-11 15:31:21.829 +07:00 [INF] Worker running at: "2022-04-11T15:31:21.8275130+07:00"
+2022-04-11 15:31:22.443 +07:00 [INF] Sukses
+2022-04-11 15:31:34.593 +07:00 [INF] Sukses
+2022-04-11 15:31:49.103 +07:00 [INF] Starting Services
+2022-04-11 15:32:05.808 +07:00 [INF] Worker running at: "2022-04-11T15:32:05.8001928+07:00"
+2022-04-11 15:32:06.380 +07:00 [INF] Sukses
+2022-04-11 15:32:25.922 +07:00 [INF] Starting Services
+2022-04-11 15:32:48.304 +07:00 [INF] Worker running at: "2022-04-11T15:32:48.2936800+07:00"
+2022-04-11 15:33:14.203 +07:00 [INF] Sukses
+2022-04-11 15:35:54.940 +07:00 [INF] Starting Services
+2022-04-11 15:36:07.986 +07:00 [INF] Worker running at: "2022-04-11T15:36:07.9726304+07:00"
+2022-04-11 15:36:09.205 +07:00 [INF] Sukses
+2022-04-11 15:42:51.880 +07:00 [INF] Starting Services
+2022-04-12 13:22:59.714 +07:00 [INF] Starting Services
+2022-04-12 13:28:58.623 +07:00 [INF] Starting Services
+2022-04-12 13:29:38.732 +07:00 [INF] Worker running at: "2022-04-12T13:29:38.7244600+07:00"
+2022-04-12 13:29:38.739 +07:00 [INF] Sukses
+2022-04-12 13:30:28.991 +07:00 [INF] Service stopped
+2022-06-07 13:25:33.375 +07:00 [INF] Starting Services
+2022-06-07 13:25:42.750 +07:00 [INF] Worker Eror : 005 BAD User is authenticated but not connected. "2022-06-07T13:25:42.7428635+07:00"
+2022-06-07 13:26:04.852 +07:00 [INF] Starting Services
+2022-06-07 13:26:20.360 +07:00 [INF] Worker Eror : 005 BAD User is authenticated but not connected. "2022-06-07T13:26:20.3523235+07:00"
+2022-06-07 13:27:08.464 +07:00 [INF] Starting Services
+2022-06-07 13:28:19.866 +07:00 [INF] Starting Services
+2022-06-07 13:29:14.793 +07:00 [INF] Starting Services
+2022-06-07 13:30:01.117 +07:00 [INF] Starting Services
+2022-06-07 13:31:22.540 +07:00 [INF] Starting Services
+2022-06-07 13:32:08.433 +07:00 [INF] Starting Services
+2022-06-07 13:33:21.471 +07:00 [INF] Starting Services
+2022-06-07 13:34:17.563 +07:00 [INF] Starting Services
+2022-06-07 13:37:39.932 +07:00 [INF] Starting Services
+2022-06-07 13:43:27.226 +07:00 [INF] Starting Services
+2022-06-07 13:45:07.017 +07:00 [INF] Starting Services
+2022-06-07 13:47:09.265 +07:00 [INF] Starting Services
+2022-06-07 13:47:45.648 +07:00 [INF] Starting Services
+2022-06-07 13:48:09.111 +07:00 [INF] Starting Services
+2022-06-07 13:48:39.147 +07:00 [INF] Starting Services
+2022-06-07 13:49:29.849 +07:00 [INF] Starting Services
+2022-06-07 13:52:43.217 +07:00 [INF] Starting Services
+2022-06-07 13:53:16.610 +07:00 [INF] Starting Services
+2022-06-07 13:53:32.257 +07:00 [INF] Starting Services
+2022-06-07 13:53:42.796 +07:00 [INF] Worker Eror : 005 BAD User is authenticated but not connected. "2022-06-07T13:53:42.7819103+07:00"
+2022-06-07 13:53:50.257 +07:00 [INF] Starting Services
+2022-06-07 13:54:02.351 +07:00 [INF] Starting Services
+2022-06-07 13:54:20.036 +07:00 [INF] Starting Services
+2022-06-07 13:55:47.760 +07:00 [INF] Starting Services
+2022-06-07 13:56:45.832 +07:00 [INF] Starting Services
+2022-06-07 13:56:56.482 +07:00 [INF] Starting Services
+2022-06-07 13:58:35.891 +07:00 [INF] Starting Services
+2022-06-07 13:59:08.781 +07:00 [INF] Starting Services
+2022-06-07 14:00:37.265 +07:00 [INF] Starting Services
+2022-06-07 14:00:42.970 +07:00 [INF] Worker Eror : 005 BAD User is authenticated but not connected. "2022-06-07T14:00:42.9605805+07:00"
+2022-06-07 14:01:01.927 +07:00 [INF] Worker Eror : 005 BAD User is authenticated but not connected. "2022-06-07T14:01:01.9224313+07:00"
+2022-06-07 14:01:12.605 +07:00 [INF] Starting Services
+2022-06-07 14:01:33.372 +07:00 [INF] Starting Services
+2022-06-07 14:17:08.298 +07:00 [INF] Starting Services
+2022-06-07 14:19:00.762 +07:00 [INF] Starting Services
+2022-06-07 14:25:18.428 +07:00 [INF] Starting Services
+2022-06-07 14:26:00.117 +07:00 [INF] Worker running at: "2022-06-07T14:26:00.1096936+07:00"
+2022-06-07 14:26:00.125 +07:00 [INF] Sukses
+2022-06-07 14:27:06.255 +07:00 [INF] Worker running at: "2022-06-07T14:27:06.2553458+07:00"
+2022-06-07 14:27:06.255 +07:00 [INF] Sukses
+2022-06-07 14:28:45.807 +07:00 [INF] Worker running at: "2022-06-07T14:28:45.8069760+07:00"
+2022-06-07 14:28:45.807 +07:00 [INF] Sukses
+2022-06-07 14:31:13.668 +07:00 [INF] Worker running at: "2022-06-07T14:31:13.6687536+07:00"
+2022-06-07 14:31:13.669 +07:00 [INF] Sukses
+2022-06-07 14:34:08.603 +07:00 [INF] Worker running at: "2022-06-07T14:34:08.6029953+07:00"
+2022-06-07 14:34:08.603 +07:00 [INF] Sukses
+2022-06-07 14:37:08.376 +07:00 [INF] Worker running at: "2022-06-07T14:37:08.3759315+07:00"
+2022-06-07 14:37:08.376 +07:00 [INF] Sukses
+2022-06-07 15:01:24.562 +07:00 [INF] Starting Services
+2022-06-07 15:02:04.944 +07:00 [INF] Starting Services
+2022-06-07 15:02:24.860 +07:00 [INF] Starting Services
+2022-06-20 09:29:49.109 +07:00 [INF] Starting Services
+2022-06-20 09:30:10.617 +07:00 [INF] Worker running at: "2022-06-20T09:30:10.6046430+07:00"
+2022-06-20 09:30:10.622 +07:00 [INF] Sukses
+2022-06-20 09:31:12.078 +07:00 [INF] Worker running at: "2022-06-20T09:31:12.0779620+07:00"
+2022-06-20 09:31:12.078 +07:00 [INF] Sukses
+2022-06-20 09:32:31.823 +07:00 [INF] Starting Services
+2022-06-20 09:33:47.214 +07:00 [INF] Worker running at: "2022-06-20T09:33:47.2052977+07:00"
+2022-06-20 09:33:47.218 +07:00 [INF] Sukses
+2022-06-20 09:34:07.944 +07:00 [INF] Starting Services
+2022-06-20 09:34:25.385 +07:00 [INF] Worker running at: "2022-06-20T09:34:25.3784958+07:00"
+2022-06-20 09:34:25.389 +07:00 [INF] Sukses
+2022-06-20 09:35:17.565 +07:00 [INF] Starting Services
+2022-06-20 09:35:39.135 +07:00 [INF] Worker running at: "2022-06-20T09:35:39.1284393+07:00"
+2022-06-20 09:35:39.138 +07:00 [INF] Sukses
+2022-06-20 09:37:29.314 +07:00 [INF] Worker running at: "2022-06-20T09:37:29.3138116+07:00"
+2022-06-20 09:37:29.314 +07:00 [INF] Sukses
+2022-06-20 09:39:09.464 +07:00 [INF] Worker running at: "2022-06-20T09:39:09.4643187+07:00"
+2022-06-20 09:39:09.464 +07:00 [INF] Sukses
+2022-07-01 16:27:33.580 +07:00 [INF] Starting Services
+2022-07-01 16:28:52.476 +07:00 [INF] Starting Services
+2022-07-01 16:29:42.499 +07:00 [INF] Starting Services
+2022-07-01 16:32:14.352 +07:00 [INF] Worker running at: "2022-07-01T16:32:14.3433368+07:00"
+2022-07-01 16:32:14.357 +07:00 [INF] Sukses
+2022-07-01 16:34:16.183 +07:00 [INF] Worker running at: "2022-07-01T16:34:16.1833125+07:00"
+2022-07-01 16:34:16.183 +07:00 [INF] Sukses
+2022-07-01 16:34:34.551 +07:00 [INF] Worker running at: "2022-07-01T16:34:34.5511592+07:00"
+2022-07-01 16:34:34.551 +07:00 [INF] Sukses
+2022-07-01 16:40:28.865 +07:00 [INF] Starting Services
+2022-07-01 16:42:09.565 +07:00 [INF] Worker running at: "2022-07-01T16:42:09.5591190+07:00"
+2022-07-01 16:42:09.569 +07:00 [INF] Sukses
+2022-07-01 16:45:02.711 +07:00 [INF] Worker running at: "2022-07-01T16:45:02.7111580+07:00"
+2022-07-01 16:45:02.711 +07:00 [INF] Sukses
+2022-07-01 16:46:11.745 +07:00 [INF] Worker running at: "2022-07-01T16:46:11.7447550+07:00"
+2022-07-01 16:46:11.745 +07:00 [INF] Sukses
+2022-07-14 11:03:11.621 +07:00 [INF] Starting Services
+2022-07-14 11:04:51.931 +07:00 [INF] Starting Services
+2022-07-14 11:28:14.627 +07:00 [INF] Starting Services
+2022-07-14 11:33:25.090 +07:00 [INF] Starting Services
+2022-07-14 11:34:25.113 +07:00 [INF] Worker running at: "2022-07-14T11:34:25.1062074+07:00"
+2022-07-15 10:20:06.646 +07:00 [INF] Starting Services
+2022-07-15 10:22:57.373 +07:00 [INF] Starting Services
+2022-07-15 10:23:25.579 +07:00 [INF] Worker Eror : Server did not accept user credentials "2022-07-15T10:23:25.5713815+07:00"
+2022-07-15 10:27:33.776 +07:00 [INF] Starting Services
+2022-07-15 10:27:55.217 +07:00 [INF] Worker Eror : Server did not accept user credentials "2022-07-15T10:27:55.2109857+07:00"
+2022-07-15 10:30:42.310 +07:00 [INF] Starting Services
+2022-07-15 10:30:46.650 +07:00 [INF] Worker Eror : Server did not accept user credentials "2022-07-15T10:30:46.6411199+07:00"
+2022-07-15 10:31:42.688 +07:00 [INF] Worker Eror : Server did not accept user credentials "2022-07-15T10:31:42.6888231+07:00"
+2022-07-15 10:31:58.359 +07:00 [INF] Worker Eror : Server did not accept user credentials "2022-07-15T10:31:58.3597739+07:00"
+2022-07-15 10:34:29.987 +07:00 [INF] Starting Services
+2022-09-20 11:02:15.647 +07:00 [INF] Starting Services
+2022-09-20 11:02:24.848 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-09-20T11:02:24.8437688+07:00"
+2022-09-20 11:02:48.856 +07:00 [INF] Starting Services
+2022-09-20 11:17:19.663 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-09-20T11:17:19.6586202+07:00"
+2022-09-20 11:18:13.525 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-09-20T11:18:13.5250993+07:00"
+2022-09-20 11:21:01.780 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-09-20T11:21:01.7776130+07:00"
+2022-09-20 11:21:39.642 +07:00 [INF] Starting Services
+2022-09-20 11:22:23.370 +07:00 [INF] Starting Services
+2022-09-20 11:37:22.973 +07:00 [INF] Starting Services
+2022-09-20 11:37:54.580 +07:00 [INF] Starting Services
+2022-09-20 11:43:48.322 +07:00 [INF] Starting Services
+2022-09-20 11:44:05.429 +07:00 [INF] Worker running at: "2022-09-20T11:44:05.4230455+07:00"
+2022-09-20 11:44:08.680 +07:00 [INF] Sukses
+2022-09-20 11:50:15.474 +07:00 [INF] Starting Services
+2022-09-20 11:54:23.316 +07:00 [INF] Starting Services
+2022-09-20 11:54:31.559 +07:00 [INF] Worker Eror : Index was outside the bounds of the array. "2022-09-20T11:54:31.5532870+07:00"
+2022-09-20 11:55:03.558 +07:00 [INF] Starting Services
+2022-09-20 11:56:20.666 +07:00 [INF] Starting Services
+2022-09-20 11:58:55.368 +07:00 [INF] Starting Services
+2022-09-20 12:04:41.481 +07:00 [INF] Starting Services
+2022-09-20 12:07:34.702 +07:00 [INF] Starting Services
+2022-09-20 12:11:18.462 +07:00 [INF] Starting Services
+2022-09-20 12:11:37.540 +07:00 [INF] Starting Services
+2022-09-20 12:15:11.307 +07:00 [INF] Starting Services
+2022-09-20 12:30:38.854 +07:00 [INF] Starting Services
+2022-09-20 12:31:46.656 +07:00 [INF] Starting Services
+2022-09-20 12:41:41.435 +07:00 [INF] Starting Services
+2022-09-20 12:44:00.770 +07:00 [INF] Starting Services
+2022-09-20 12:47:11.947 +07:00 [INF] Starting Services
+2022-09-20 12:47:27.705 +07:00 [INF] Starting Services
+2022-09-20 12:48:00.639 +07:00 [INF] Starting Services
+2022-09-20 12:49:16.929 +07:00 [INF] Starting Services
+2022-09-20 12:50:11.627 +07:00 [INF] Starting Services
+2022-09-20 12:50:48.700 +07:00 [INF] Starting Services
+2022-09-20 12:51:06.475 +07:00 [INF] Starting Services
+2022-09-20 12:51:21.026 +07:00 [INF] Starting Services
+2022-09-20 12:52:10.009 +07:00 [INF] Worker running at: "2022-09-20T12:52:09.9911781+07:00"
+2022-09-20 12:52:10.016 +07:00 [INF] Sukses
+2022-09-20 12:52:27.274 +07:00 [INF] Service stopped
+2022-09-20 12:52:43.259 +07:00 [INF] Starting Services
+2022-09-20 12:55:02.168 +07:00 [INF] Worker running at: "2022-09-20T12:55:02.1561075+07:00"
+2022-09-20 12:55:02.177 +07:00 [INF] Sukses

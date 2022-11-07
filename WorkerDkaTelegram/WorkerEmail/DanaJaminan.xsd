@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DanaJaminan" targetNamespace="http://tempuri.org/DanaJaminan.xsd" xmlns:mstns="http://tempuri.org/DanaJaminan.xsd" xmlns="http://tempuri.org/DanaJaminan.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=10.10.100.178;Initial Catalog=Keuangan;Persist Security Info=True;User ID=sa;Password=Kbi2015" IsAppSettingsProperty="false" Modifier="Assembly" Name="dti-reza.Keuangan.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DanaJaminanTableAdapter" GeneratorDataComponentClassName="DanaJaminanTableAdapter" Name="DanaJaminan" UserDataComponentName="DanaJaminanTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dti-reza.Keuangan.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT a.id, a.businessdate, a.code, a.bank, a.jumlah, a.jangkawaktu, a.tanggalpenempatan, a.jatuhtempo, a.sukubunga, a.bungabruto, a.pph, a.bunga, a.adjustment, a.admin, a.transferdana, a.transferdanakbi, a.penempatan, a.aro, a.multiple, 
+                  a.sequence, a.flag, b.name
+FROM     DanaJaminan AS a INNER JOIN
+                  AnggotaKliring AS b ON a.code = b.code</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="businessdate" DataSetColumn="businessdate" />
+              <Mapping SourceColumn="code" DataSetColumn="code" />
+              <Mapping SourceColumn="bank" DataSetColumn="bank" />
+              <Mapping SourceColumn="jumlah" DataSetColumn="jumlah" />
+              <Mapping SourceColumn="jangkawaktu" DataSetColumn="jangkawaktu" />
+              <Mapping SourceColumn="tanggalpenempatan" DataSetColumn="tanggalpenempatan" />
+              <Mapping SourceColumn="jatuhtempo" DataSetColumn="jatuhtempo" />
+              <Mapping SourceColumn="sukubunga" DataSetColumn="sukubunga" />
+              <Mapping SourceColumn="bungabruto" DataSetColumn="bungabruto" />
+              <Mapping SourceColumn="pph" DataSetColumn="pph" />
+              <Mapping SourceColumn="bunga" DataSetColumn="bunga" />
+              <Mapping SourceColumn="adjustment" DataSetColumn="adjustment" />
+              <Mapping SourceColumn="admin" DataSetColumn="admin" />
+              <Mapping SourceColumn="transferdana" DataSetColumn="transferdana" />
+              <Mapping SourceColumn="transferdanakbi" DataSetColumn="transferdanakbi" />
+              <Mapping SourceColumn="penempatan" DataSetColumn="penempatan" />
+              <Mapping SourceColumn="aro" DataSetColumn="aro" />
+              <Mapping SourceColumn="multiple" DataSetColumn="multiple" />
+              <Mapping SourceColumn="sequence" DataSetColumn="sequence" />
+              <Mapping SourceColumn="flag" DataSetColumn="flag" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="dti-reza.Keuangan.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByBd" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBd" GeneratorSourceName="FillByBd" GetMethodModifier="Public" GetMethodName="GetDataByBd" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBd" UserSourceName="FillByBd">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT a.code, b.name
+FROM     DanaJaminan AS a INNER JOIN
+                  AnggotaKliring AS b ON a.code = b.code
+WHERE  (a.businessdate = @bd)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="bd" ColumnName="businessdate" DataSourceName="Keuangan.dbo.DanaJaminan" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@bd" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="businessdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DanaJaminan1TableAdapter" GeneratorDataComponentClassName="DanaJaminan1TableAdapter" Name="DanaJaminan1" UserDataComponentName="DanaJaminan1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dti-reza.Keuangan.dbo" DbObjectName="Keuangan.dbo.DanaJaminan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [DanaJaminan] WHERE (([id] = @Original_id) AND ((@IsNull_businessdate = 1 AND [businessdate] IS NULL) OR ([businessdate] = @Original_businessdate)) AND ((@IsNull_code = 1 AND [code] IS NULL) OR ([code] = @Original_code)) AND ((@IsNull_bank = 1 AND [bank] IS NULL) OR ([bank] = @Original_bank)) AND ((@IsNull_jumlah = 1 AND [jumlah] IS NULL) OR ([jumlah] = @Original_jumlah)) AND ((@IsNull_jangkawaktu = 1 AND [jangkawaktu] IS NULL) OR ([jangkawaktu] = @Original_jangkawaktu)) AND ((@IsNull_tanggalpenempatan = 1 AND [tanggalpenempatan] IS NULL) OR ([tanggalpenempatan] = @Original_tanggalpenempatan)) AND ((@IsNull_jatuhtempo = 1 AND [jatuhtempo] IS NULL) OR ([jatuhtempo] = @Original_jatuhtempo)) AND ((@IsNull_sukubunga = 1 AND [sukubunga] IS NULL) OR ([sukubunga] = @Original_sukubunga)) AND ((@IsNull_bungabruto = 1 AND [bungabruto] IS NULL) OR ([bungabruto] = @Original_bungabruto)) AND ((@IsNull_pph = 1 AND [pph] IS NULL) OR ([pph] = @Original_pph)) AND ((@IsNull_bunga = 1 AND [bunga] IS NULL) OR ([bunga] = @Original_bunga)) AND ((@IsNull_adjustment = 1 AND [adjustment] IS NULL) OR ([adjustment] = @Original_adjustment)) AND ((@IsNull_admin = 1 AND [admin] IS NULL) OR ([admin] = @Original_admin)) AND ((@IsNull_transferdana = 1 AND [transferdana] IS NULL) OR ([transferdana] = @Original_transferdana)) AND ((@IsNull_transferdanakbi = 1 AND [transferdanakbi] IS NULL) OR ([transferdanakbi] = @Original_transferdanakbi)) AND ((@IsNull_penempatan = 1 AND [penempatan] IS NULL) OR ([penempatan] = @Original_penempatan)) AND ((@IsNull_aro = 1 AND [aro] IS NULL) OR ([aro] = @Original_aro)) AND ((@IsNull_multiple = 1 AND [multiple] IS NULL) OR ([multiple] = @Original_multiple)) AND ((@IsNull_sequence = 1 AND [sequence] IS NULL) OR ([sequence] = @Original_sequence)) AND ((@IsNull_flag = 1 AND [flag] IS NULL) OR ([flag] = @Original_flag)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_businessdate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="businessdate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_businessdate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="businessdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_code" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="code" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_code" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bank" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bank" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bank" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bank" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jumlah" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_jumlah" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jangkawaktu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jangkawaktu" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_jangkawaktu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jangkawaktu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tanggalpenempatan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tanggalpenempatan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_tanggalpenempatan" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggalpenempatan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jatuhtempo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jatuhtempo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_jatuhtempo" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="jatuhtempo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_sukubunga" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="sukubunga" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_sukubunga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="sukubunga" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bungabruto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bungabruto" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_bungabruto" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="bungabruto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pph" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pph" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_pph" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="pph" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bunga" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bunga" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_bunga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="bunga" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_adjustment" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="adjustment" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_adjustment" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="adjustment" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_admin" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="admin" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_admin" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="admin" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_transferdana" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="transferdana" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_transferdana" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="transferdana" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_transferdanakbi" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="transferdanakbi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_transferdanakbi" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="transferdanakbi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_penempatan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="penempatan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_penempatan" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="penempatan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_aro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="aro" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_aro" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="aro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_multiple" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="multiple" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_multiple" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="multiple" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_sequence" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="sequence" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_sequence" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="sequence" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_flag" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="flag" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_flag" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="flag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [DanaJaminan] ([businessdate], [code], [bank], [jumlah], [jangkawaktu], [tanggalpenempatan], [jatuhtempo], [sukubunga], [bungabruto], [pph], [bunga], [adjustment], [admin], [transferdana], [transferdanakbi], [penempatan], [aro], [multiple], [sequence], [flag]) VALUES (@businessdate, @code, @bank, @jumlah, @jangkawaktu, @tanggalpenempatan, @jatuhtempo, @sukubunga, @bungabruto, @pph, @bunga, @adjustment, @admin, @transferdana, @transferdanakbi, @penempatan, @aro, @multiple, @sequence, @flag);
+SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jatuhtempo, sukubunga, bungabruto, pph, bunga, adjustment, admin, transferdana, transferdanakbi, penempatan, aro, multiple, sequence, flag FROM DanaJaminan WHERE (id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@businessdate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="businessdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@code" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bank" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bank" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@jumlah" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@jangkawaktu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jangkawaktu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@tanggalpenempatan" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggalpenempatan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@jatuhtempo" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="jatuhtempo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@sukubunga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="sukubunga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@bungabruto" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="bungabruto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@pph" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="pph" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@bunga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="bunga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@adjustment" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="adjustment" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@admin" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="admin" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@transferdana" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="transferdana" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@transferdanakbi" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="transferdanakbi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@penempatan" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="penempatan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@aro" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="aro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@multiple" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="multiple" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@sequence" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="sequence" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@flag" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="flag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DanaJaminan.*
+FROM     DanaJaminan</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [DanaJaminan] SET [businessdate] = @businessdate, [code] = @code, [bank] = @bank, [jumlah] = @jumlah, [jangkawaktu] = @jangkawaktu, [tanggalpenempatan] = @tanggalpenempatan, [jatuhtempo] = @jatuhtempo, [sukubunga] = @sukubunga, [bungabruto] = @bungabruto, [pph] = @pph, [bunga] = @bunga, [adjustment] = @adjustment, [admin] = @admin, [transferdana] = @transferdana, [transferdanakbi] = @transferdanakbi, [penempatan] = @penempatan, [aro] = @aro, [multiple] = @multiple, [sequence] = @sequence, [flag] = @flag WHERE (([id] = @Original_id) AND ((@IsNull_businessdate = 1 AND [businessdate] IS NULL) OR ([businessdate] = @Original_businessdate)) AND ((@IsNull_code = 1 AND [code] IS NULL) OR ([code] = @Original_code)) AND ((@IsNull_bank = 1 AND [bank] IS NULL) OR ([bank] = @Original_bank)) AND ((@IsNull_jumlah = 1 AND [jumlah] IS NULL) OR ([jumlah] = @Original_jumlah)) AND ((@IsNull_jangkawaktu = 1 AND [jangkawaktu] IS NULL) OR ([jangkawaktu] = @Original_jangkawaktu)) AND ((@IsNull_tanggalpenempatan = 1 AND [tanggalpenempatan] IS NULL) OR ([tanggalpenempatan] = @Original_tanggalpenempatan)) AND ((@IsNull_jatuhtempo = 1 AND [jatuhtempo] IS NULL) OR ([jatuhtempo] = @Original_jatuhtempo)) AND ((@IsNull_sukubunga = 1 AND [sukubunga] IS NULL) OR ([sukubunga] = @Original_sukubunga)) AND ((@IsNull_bungabruto = 1 AND [bungabruto] IS NULL) OR ([bungabruto] = @Original_bungabruto)) AND ((@IsNull_pph = 1 AND [pph] IS NULL) OR ([pph] = @Original_pph)) AND ((@IsNull_bunga = 1 AND [bunga] IS NULL) OR ([bunga] = @Original_bunga)) AND ((@IsNull_adjustment = 1 AND [adjustment] IS NULL) OR ([adjustment] = @Original_adjustment)) AND ((@IsNull_admin = 1 AND [admin] IS NULL) OR ([admin] = @Original_admin)) AND ((@IsNull_transferdana = 1 AND [transferdana] IS NULL) OR ([transferdana] = @Original_transferdana)) AND ((@IsNull_transferdanakbi = 1 AND [transferdanakbi] IS NULL) OR ([transferdanakbi] = @Original_transferdanakbi)) AND ((@IsNull_penempatan = 1 AND [penempatan] IS NULL) OR ([penempatan] = @Original_penempatan)) AND ((@IsNull_aro = 1 AND [aro] IS NULL) OR ([aro] = @Original_aro)) AND ((@IsNull_multiple = 1 AND [multiple] IS NULL) OR ([multiple] = @Original_multiple)) AND ((@IsNull_sequence = 1 AND [sequence] IS NULL) OR ([sequence] = @Original_sequence)) AND ((@IsNull_flag = 1 AND [flag] IS NULL) OR ([flag] = @Original_flag)));
+SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jatuhtempo, sukubunga, bungabruto, pph, bunga, adjustment, admin, transferdana, transferdanakbi, penempatan, aro, multiple, sequence, flag FROM DanaJaminan WHERE (id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@businessdate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="businessdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@code" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@bank" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bank" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@jumlah" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@jangkawaktu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jangkawaktu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@tanggalpenempatan" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggalpenempatan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@jatuhtempo" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="jatuhtempo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@sukubunga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="sukubunga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@bungabruto" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="bungabruto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@pph" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="pph" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@bunga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="bunga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@adjustment" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="adjustment" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@admin" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="admin" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@transferdana" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="transferdana" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@transferdanakbi" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="transferdanakbi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@penempatan" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="penempatan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@aro" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="aro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@multiple" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="multiple" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@sequence" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="sequence" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@flag" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="flag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_businessdate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="businessdate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_businessdate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="businessdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_code" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="code" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_code" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="code" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bank" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bank" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_bank" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bank" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jumlah" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_jumlah" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="jumlah" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jangkawaktu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jangkawaktu" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_jangkawaktu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jangkawaktu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_tanggalpenempatan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="tanggalpenempatan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_tanggalpenempatan" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggalpenempatan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jatuhtempo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jatuhtempo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_jatuhtempo" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="jatuhtempo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_sukubunga" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="sukubunga" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_sukubunga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="sukubunga" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bungabruto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bungabruto" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_bungabruto" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="bungabruto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pph" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pph" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_pph" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="pph" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_bunga" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="bunga" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_bunga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="bunga" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_adjustment" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="adjustment" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_adjustment" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="adjustment" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_admin" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="admin" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_admin" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="admin" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_transferdana" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="transferdana" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_transferdana" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="transferdana" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_transferdanakbi" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="transferdanakbi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_transferdanakbi" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="transferdanakbi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_penempatan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="penempatan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_penempatan" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="penempatan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_aro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="aro" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_aro" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="aro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_multiple" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="multiple" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_multiple" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="multiple" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_sequence" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="sequence" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_sequence" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="sequence" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_flag" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="flag" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_flag" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="flag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="Keuangan.dbo.DanaJaminan" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="businessdate" DataSetColumn="businessdate" />
+              <Mapping SourceColumn="code" DataSetColumn="code" />
+              <Mapping SourceColumn="bank" DataSetColumn="bank" />
+              <Mapping SourceColumn="jumlah" DataSetColumn="jumlah" />
+              <Mapping SourceColumn="jangkawaktu" DataSetColumn="jangkawaktu" />
+              <Mapping SourceColumn="tanggalpenempatan" DataSetColumn="tanggalpenempatan" />
+              <Mapping SourceColumn="jatuhtempo" DataSetColumn="jatuhtempo" />
+              <Mapping SourceColumn="sukubunga" DataSetColumn="sukubunga" />
+              <Mapping SourceColumn="bungabruto" DataSetColumn="bungabruto" />
+              <Mapping SourceColumn="pph" DataSetColumn="pph" />
+              <Mapping SourceColumn="bunga" DataSetColumn="bunga" />
+              <Mapping SourceColumn="adjustment" DataSetColumn="adjustment" />
+              <Mapping SourceColumn="admin" DataSetColumn="admin" />
+              <Mapping SourceColumn="transferdana" DataSetColumn="transferdana" />
+              <Mapping SourceColumn="transferdanakbi" DataSetColumn="transferdanakbi" />
+              <Mapping SourceColumn="penempatan" DataSetColumn="penempatan" />
+              <Mapping SourceColumn="aro" DataSetColumn="aro" />
+              <Mapping SourceColumn="multiple" DataSetColumn="multiple" />
+              <Mapping SourceColumn="sequence" DataSetColumn="sequence" />
+              <Mapping SourceColumn="flag" DataSetColumn="flag" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="dti-reza.Keuangan.dbo" DbObjectName="Keuangan.dbo.DanaJaminan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDate" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDate" GeneratorSourceName="FillByDate" GetMethodModifier="Public" GetMethodName="GetDataByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDate" UserSourceName="FillByDate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jatuhtempo, sukubunga, bungabruto, pph, bunga, adjustment, admin, transferdana, transferdanakbi, penempatan, aro, multiple, sequence, flag
+FROM     DanaJaminan
+WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd) AND  (penempatan = @penempatan)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="tglawal" ColumnName="tanggalpenempatan" DataSourceName="Keuangan.dbo.DanaJaminan" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@tglawal" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="tanggalpenempatan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="tglakhir" ColumnName="jatuhtempo" DataSourceName="Keuangan.dbo.DanaJaminan" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@tglakhir" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="jatuhtempo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cd" ColumnName="code" DataSourceName="Keuangan.dbo.DanaJaminan" DataTypeServer="varchar(3)" DbType="AnsiString" Direction="Input" ParameterName="@cd" Precision="0" ProviderType="VarChar" Scale="0" Size="3" SourceColumn="code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="penempatan" ColumnName="penempatan" DataSourceName="Keuangan.dbo.DanaJaminan" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@penempatan" Precision="0" ProviderType="Money" Scale="0" Size="8" SourceColumn="penempatan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SendEmailTableAdapter" GeneratorDataComponentClassName="SendEmailTableAdapter" Name="SendEmail" UserDataComponentName="SendEmailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dti-reza.Keuangan.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT a.code_ak, a.email, b.name
+FROM   RecepientEmail AS a INNER JOIN
+             AnggotaKliring AS b ON a.code_ak = b.code
+WHERE (a.status = 1) AND (a.code_ak = @code)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="code" ColumnName="code_ak" DataSourceName="Keuangan.dbo.RecepientEmail" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@code" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="code_ak" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="code_ak" DataSetColumn="code_ak" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DanaJaminan" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DanaJaminan" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DanaJaminan">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DanaJaminan" msprop:Generator_RowEvHandlerName="DanaJaminanRowChangeEventHandler" msprop:Generator_RowDeletedName="DanaJaminanRowDeleted" msprop:Generator_RowDeletingName="DanaJaminanRowDeleting" msprop:Generator_RowEvArgName="DanaJaminanRowChangeEvent" msprop:Generator_TablePropName="_DanaJaminan" msprop:Generator_RowChangedName="DanaJaminanRowChanged" msprop:Generator_UserTableName="DanaJaminan" msprop:Generator_RowChangingName="DanaJaminanRowChanging" msprop:Generator_RowClassName="DanaJaminanRow" msprop:Generator_TableClassName="DanaJaminanDataTable" msprop:Generator_TableVarName="tableDanaJaminan">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" />
+              <xs:element name="businessdate" msprop:Generator_ColumnPropNameInTable="businessdateColumn" msprop:Generator_ColumnPropNameInRow="businessdate" msprop:Generator_UserColumnName="businessdate" msprop:Generator_ColumnVarNameInTable="columnbusinessdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_UserColumnName="code" msprop:Generator_ColumnVarNameInTable="columncode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bank" msprop:Generator_ColumnPropNameInTable="bankColumn" msprop:Generator_ColumnPropNameInRow="bank" msprop:Generator_UserColumnName="bank" msprop:Generator_ColumnVarNameInTable="columnbank" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jumlah" msprop:Generator_ColumnPropNameInTable="jumlahColumn" msprop:Generator_ColumnPropNameInRow="jumlah" msprop:Generator_UserColumnName="jumlah" msprop:Generator_ColumnVarNameInTable="columnjumlah" type="xs:decimal" minOccurs="0" />
+              <xs:element name="jangkawaktu" msprop:Generator_ColumnPropNameInTable="jangkawaktuColumn" msprop:Generator_ColumnPropNameInRow="jangkawaktu" msprop:Generator_UserColumnName="jangkawaktu" msprop:Generator_ColumnVarNameInTable="columnjangkawaktu" type="xs:int" minOccurs="0" />
+              <xs:element name="tanggalpenempatan" msprop:Generator_ColumnPropNameInTable="tanggalpenempatanColumn" msprop:Generator_ColumnPropNameInRow="tanggalpenempatan" msprop:Generator_UserColumnName="tanggalpenempatan" msprop:Generator_ColumnVarNameInTable="columntanggalpenempatan" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="jatuhtempo" msprop:Generator_ColumnPropNameInTable="jatuhtempoColumn" msprop:Generator_ColumnPropNameInRow="jatuhtempo" msprop:Generator_UserColumnName="jatuhtempo" msprop:Generator_ColumnVarNameInTable="columnjatuhtempo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sukubunga" msprop:Generator_ColumnPropNameInTable="sukubungaColumn" msprop:Generator_ColumnPropNameInRow="sukubunga" msprop:Generator_UserColumnName="sukubunga" msprop:Generator_ColumnVarNameInTable="columnsukubunga" type="xs:decimal" minOccurs="0" />
+              <xs:element name="bungabruto" msprop:Generator_ColumnPropNameInTable="bungabrutoColumn" msprop:Generator_ColumnPropNameInRow="bungabruto" msprop:Generator_UserColumnName="bungabruto" msprop:Generator_ColumnVarNameInTable="columnbungabruto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pph" msprop:Generator_ColumnPropNameInTable="pphColumn" msprop:Generator_ColumnPropNameInRow="pph" msprop:Generator_UserColumnName="pph" msprop:Generator_ColumnVarNameInTable="columnpph" type="xs:decimal" minOccurs="0" />
+              <xs:element name="bunga" msprop:Generator_ColumnPropNameInTable="bungaColumn" msprop:Generator_ColumnPropNameInRow="bunga" msprop:Generator_UserColumnName="bunga" msprop:Generator_ColumnVarNameInTable="columnbunga" type="xs:decimal" minOccurs="0" />
+              <xs:element name="adjustment" msprop:Generator_ColumnPropNameInTable="adjustmentColumn" msprop:Generator_ColumnPropNameInRow="adjustment" msprop:Generator_UserColumnName="adjustment" msprop:Generator_ColumnVarNameInTable="columnadjustment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="admin" msprop:Generator_ColumnPropNameInTable="adminColumn" msprop:Generator_ColumnPropNameInRow="admin" msprop:Generator_UserColumnName="admin" msprop:Generator_ColumnVarNameInTable="columnadmin" type="xs:decimal" minOccurs="0" />
+              <xs:element name="transferdana" msprop:Generator_ColumnPropNameInTable="transferdanaColumn" msprop:Generator_ColumnPropNameInRow="transferdana" msprop:Generator_UserColumnName="transferdana" msprop:Generator_ColumnVarNameInTable="columntransferdana" type="xs:decimal" minOccurs="0" />
+              <xs:element name="transferdanakbi" msprop:Generator_ColumnPropNameInTable="transferdanakbiColumn" msprop:Generator_ColumnPropNameInRow="transferdanakbi" msprop:Generator_UserColumnName="transferdanakbi" msprop:Generator_ColumnVarNameInTable="columntransferdanakbi" type="xs:decimal" minOccurs="0" />
+              <xs:element name="penempatan" msprop:Generator_ColumnPropNameInTable="penempatanColumn" msprop:Generator_ColumnPropNameInRow="penempatan" msprop:Generator_UserColumnName="penempatan" msprop:Generator_ColumnVarNameInTable="columnpenempatan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="aro" msprop:Generator_ColumnPropNameInTable="aroColumn" msprop:Generator_ColumnPropNameInRow="aro" msprop:Generator_UserColumnName="aro" msprop:Generator_ColumnVarNameInTable="columnaro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="multiple" msprop:Generator_ColumnPropNameInTable="multipleColumn" msprop:Generator_ColumnPropNameInRow="multiple" msprop:Generator_UserColumnName="multiple" msprop:Generator_ColumnVarNameInTable="columnmultiple" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sequence" msprop:Generator_ColumnPropNameInTable="sequenceColumn" msprop:Generator_ColumnPropNameInRow="sequence" msprop:Generator_UserColumnName="sequence" msprop:Generator_ColumnVarNameInTable="columnsequence" type="xs:int" minOccurs="0" />
+              <xs:element name="flag" msprop:Generator_ColumnPropNameInTable="flagColumn" msprop:Generator_ColumnPropNameInRow="flag" msprop:Generator_UserColumnName="flag" msprop:Generator_ColumnVarNameInTable="columnflag" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnVarNameInTable="columnname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DanaJaminan1" msprop:Generator_RowEvHandlerName="DanaJaminan1RowChangeEventHandler" msprop:Generator_RowDeletedName="DanaJaminan1RowDeleted" msprop:Generator_RowDeletingName="DanaJaminan1RowDeleting" msprop:Generator_RowEvArgName="DanaJaminan1RowChangeEvent" msprop:Generator_TablePropName="DanaJaminan1" msprop:Generator_RowChangedName="DanaJaminan1RowChanged" msprop:Generator_UserTableName="DanaJaminan1" msprop:Generator_RowChangingName="DanaJaminan1RowChanging" msprop:Generator_RowClassName="DanaJaminan1Row" msprop:Generator_TableClassName="DanaJaminan1DataTable" msprop:Generator_TableVarName="tableDanaJaminan1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" />
+              <xs:element name="businessdate" msprop:Generator_ColumnPropNameInTable="businessdateColumn" msprop:Generator_ColumnPropNameInRow="businessdate" msprop:Generator_UserColumnName="businessdate" msprop:Generator_ColumnVarNameInTable="columnbusinessdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_UserColumnName="code" msprop:Generator_ColumnVarNameInTable="columncode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bank" msprop:Generator_ColumnPropNameInTable="bankColumn" msprop:Generator_ColumnPropNameInRow="bank" msprop:Generator_UserColumnName="bank" msprop:Generator_ColumnVarNameInTable="columnbank" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jumlah" msprop:Generator_ColumnPropNameInTable="jumlahColumn" msprop:Generator_ColumnPropNameInRow="jumlah" msprop:Generator_UserColumnName="jumlah" msprop:Generator_ColumnVarNameInTable="columnjumlah" type="xs:decimal" minOccurs="0" />
+              <xs:element name="jangkawaktu" msprop:Generator_ColumnPropNameInTable="jangkawaktuColumn" msprop:Generator_ColumnPropNameInRow="jangkawaktu" msprop:Generator_UserColumnName="jangkawaktu" msprop:Generator_ColumnVarNameInTable="columnjangkawaktu" type="xs:int" minOccurs="0" />
+              <xs:element name="tanggalpenempatan" msprop:Generator_ColumnPropNameInTable="tanggalpenempatanColumn" msprop:Generator_ColumnPropNameInRow="tanggalpenempatan" msprop:Generator_UserColumnName="tanggalpenempatan" msprop:Generator_ColumnVarNameInTable="columntanggalpenempatan" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="jatuhtempo" msprop:Generator_ColumnPropNameInTable="jatuhtempoColumn" msprop:Generator_ColumnPropNameInRow="jatuhtempo" msprop:Generator_UserColumnName="jatuhtempo" msprop:Generator_ColumnVarNameInTable="columnjatuhtempo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sukubunga" msprop:Generator_ColumnPropNameInTable="sukubungaColumn" msprop:Generator_ColumnPropNameInRow="sukubunga" msprop:Generator_UserColumnName="sukubunga" msprop:Generator_ColumnVarNameInTable="columnsukubunga" type="xs:decimal" minOccurs="0" />
+              <xs:element name="bungabruto" msprop:Generator_ColumnPropNameInTable="bungabrutoColumn" msprop:Generator_ColumnPropNameInRow="bungabruto" msprop:Generator_UserColumnName="bungabruto" msprop:Generator_ColumnVarNameInTable="columnbungabruto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pph" msprop:Generator_ColumnPropNameInTable="pphColumn" msprop:Generator_ColumnPropNameInRow="pph" msprop:Generator_UserColumnName="pph" msprop:Generator_ColumnVarNameInTable="columnpph" type="xs:decimal" minOccurs="0" />
+              <xs:element name="bunga" msprop:Generator_ColumnPropNameInTable="bungaColumn" msprop:Generator_ColumnPropNameInRow="bunga" msprop:Generator_UserColumnName="bunga" msprop:Generator_ColumnVarNameInTable="columnbunga" type="xs:decimal" minOccurs="0" />
+              <xs:element name="adjustment" msprop:Generator_ColumnPropNameInTable="adjustmentColumn" msprop:Generator_ColumnPropNameInRow="adjustment" msprop:Generator_UserColumnName="adjustment" msprop:Generator_ColumnVarNameInTable="columnadjustment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="admin" msprop:Generator_ColumnPropNameInTable="adminColumn" msprop:Generator_ColumnPropNameInRow="admin" msprop:Generator_UserColumnName="admin" msprop:Generator_ColumnVarNameInTable="columnadmin" type="xs:decimal" minOccurs="0" />
+              <xs:element name="transferdana" msprop:Generator_ColumnPropNameInTable="transferdanaColumn" msprop:Generator_ColumnPropNameInRow="transferdana" msprop:Generator_UserColumnName="transferdana" msprop:Generator_ColumnVarNameInTable="columntransferdana" type="xs:decimal" minOccurs="0" />
+              <xs:element name="transferdanakbi" msprop:Generator_ColumnPropNameInTable="transferdanakbiColumn" msprop:Generator_ColumnPropNameInRow="transferdanakbi" msprop:Generator_UserColumnName="transferdanakbi" msprop:Generator_ColumnVarNameInTable="columntransferdanakbi" type="xs:decimal" minOccurs="0" />
+              <xs:element name="penempatan" msprop:Generator_ColumnPropNameInTable="penempatanColumn" msprop:Generator_ColumnPropNameInRow="penempatan" msprop:Generator_UserColumnName="penempatan" msprop:Generator_ColumnVarNameInTable="columnpenempatan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="aro" msprop:Generator_ColumnPropNameInTable="aroColumn" msprop:Generator_ColumnPropNameInRow="aro" msprop:Generator_UserColumnName="aro" msprop:Generator_ColumnVarNameInTable="columnaro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="multiple" msprop:Generator_ColumnPropNameInTable="multipleColumn" msprop:Generator_ColumnPropNameInRow="multiple" msprop:Generator_UserColumnName="multiple" msprop:Generator_ColumnVarNameInTable="columnmultiple" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sequence" msprop:Generator_ColumnPropNameInTable="sequenceColumn" msprop:Generator_ColumnPropNameInRow="sequence" msprop:Generator_UserColumnName="sequence" msprop:Generator_ColumnVarNameInTable="columnsequence" type="xs:int" minOccurs="0" />
+              <xs:element name="flag" msprop:Generator_ColumnPropNameInTable="flagColumn" msprop:Generator_ColumnPropNameInRow="flag" msprop:Generator_UserColumnName="flag" msprop:Generator_ColumnVarNameInTable="columnflag" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SendEmail" msprop:Generator_RowClassName="SendEmailRow" msprop:Generator_RowEvHandlerName="SendEmailRowChangeEventHandler" msprop:Generator_RowDeletedName="SendEmailRowDeleted" msprop:Generator_RowDeletingName="SendEmailRowDeleting" msprop:Generator_RowEvArgName="SendEmailRowChangeEvent" msprop:Generator_TablePropName="SendEmail" msprop:Generator_RowChangedName="SendEmailRowChanged" msprop:Generator_UserTableName="SendEmail" msprop:Generator_RowChangingName="SendEmailRowChanging" msprop:Generator_TableClassName="SendEmailDataTable" msprop:Generator_TableVarName="tableSendEmail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code_ak" msprop:Generator_UserColumnName="code_ak" msprop:Generator_ColumnPropNameInTable="code_akColumn" msprop:Generator_ColumnPropNameInRow="code_ak" msprop:Generator_ColumnVarNameInTable="columncode_ak">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_UserColumnName="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnVarNameInTable="columnemail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnVarNameInTable="columnname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DanaJaminan" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="DanaJaminan1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DanaJaminan1" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
