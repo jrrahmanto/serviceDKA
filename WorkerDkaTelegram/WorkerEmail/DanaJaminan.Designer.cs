@@ -393,6 +393,8 @@ namespace WorkerEmail {
             
             private global::System.Data.DataColumn columnname;
             
+            private global::System.Data.DataColumn columnbatch;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DanaJaminanDataTable() {
@@ -604,6 +606,14 @@ namespace WorkerEmail {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn batchColumn {
+                get {
+                    return this.columnbatch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -660,7 +670,8 @@ namespace WorkerEmail {
                         string multiple, 
                         int sequence, 
                         string flag, 
-                        string name) {
+                        string name, 
+                        string batch) {
                 DanaJaminanRow rowDanaJaminanRow = ((DanaJaminanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -684,7 +695,8 @@ namespace WorkerEmail {
                         multiple,
                         sequence,
                         flag,
-                        name};
+                        name,
+                        batch};
                 rowDanaJaminanRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDanaJaminanRow);
                 return rowDanaJaminanRow;
@@ -736,6 +748,7 @@ namespace WorkerEmail {
                 this.columnsequence = base.Columns["sequence"];
                 this.columnflag = base.Columns["flag"];
                 this.columnname = base.Columns["name"];
+                this.columnbatch = base.Columns["batch"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -785,6 +798,8 @@ namespace WorkerEmail {
                 base.Columns.Add(this.columnflag);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
+                this.columnbatch = new global::System.Data.DataColumn("batch", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbatch);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -799,6 +814,7 @@ namespace WorkerEmail {
                 this.columnmultiple.MaxLength = 1;
                 this.columnflag.MaxLength = 1;
                 this.columnname.MaxLength = 200;
+                this.columnbatch.MaxLength = 50;
                 this.ExtendedProperties.Add("Generator_TablePropName", "_DanaJaminan");
                 this.ExtendedProperties.Add("Generator_UserTableName", "DanaJaminan");
             }
@@ -975,6 +991,8 @@ namespace WorkerEmail {
             private global::System.Data.DataColumn columnsequence;
             
             private global::System.Data.DataColumn columnflag;
+            
+            private global::System.Data.DataColumn columnbatch;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1179,6 +1197,14 @@ namespace WorkerEmail {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn batchColumn {
+                get {
+                    return this.columnbatch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1234,7 +1260,8 @@ namespace WorkerEmail {
                         string aro, 
                         string multiple, 
                         int sequence, 
-                        string flag) {
+                        string flag, 
+                        string batch) {
                 DanaJaminan1Row rowDanaJaminan1Row = ((DanaJaminan1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1257,7 +1284,8 @@ namespace WorkerEmail {
                         aro,
                         multiple,
                         sequence,
-                        flag};
+                        flag,
+                        batch};
                 rowDanaJaminan1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDanaJaminan1Row);
                 return rowDanaJaminan1Row;
@@ -1308,6 +1336,7 @@ namespace WorkerEmail {
                 this.columnmultiple = base.Columns["multiple"];
                 this.columnsequence = base.Columns["sequence"];
                 this.columnflag = base.Columns["flag"];
+                this.columnbatch = base.Columns["batch"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1355,6 +1384,8 @@ namespace WorkerEmail {
                 base.Columns.Add(this.columnsequence);
                 this.columnflag = new global::System.Data.DataColumn("flag", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnflag);
+                this.columnbatch = new global::System.Data.DataColumn("batch", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbatch);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -1368,6 +1399,7 @@ namespace WorkerEmail {
                 this.columnaro.MaxLength = 1;
                 this.columnmultiple.MaxLength = 1;
                 this.columnflag.MaxLength = 1;
+                this.columnbatch.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2137,6 +2169,22 @@ namespace WorkerEmail {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string batch {
+                get {
+                    try {
+                        return ((string)(this[this.tableDanaJaminan.batchColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'batch\' in table \'DanaJaminan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDanaJaminan.batchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsbusinessdateNull() {
                 return this.IsNull(this.tableDanaJaminan.businessdateColumn);
             }
@@ -2385,6 +2433,18 @@ namespace WorkerEmail {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetnameNull() {
                 this[this.tableDanaJaminan.nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsbatchNull() {
+                return this.IsNull(this.tableDanaJaminan.batchColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetbatchNull() {
+                this[this.tableDanaJaminan.batchColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2735,6 +2795,22 @@ namespace WorkerEmail {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string batch {
+                get {
+                    try {
+                        return ((string)(this[this.tableDanaJaminan1.batchColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'batch\' in table \'DanaJaminan1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDanaJaminan1.batchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsbusinessdateNull() {
                 return this.IsNull(this.tableDanaJaminan1.businessdateColumn);
             }
@@ -2971,6 +3047,18 @@ namespace WorkerEmail {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetflagNull() {
                 this[this.tableDanaJaminan1.flagColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsbatchNull() {
+                return this.IsNull(this.tableDanaJaminan1.batchColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetbatchNull() {
+                this[this.tableDanaJaminan1.batchColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3288,6 +3376,7 @@ namespace WorkerEmail.DanaJaminanTableAdapters {
             tableMapping.ColumnMappings.Add("sequence", "sequence");
             tableMapping.ColumnMappings.Add("flag", "flag");
             tableMapping.ColumnMappings.Add("name", "name");
+            tableMapping.ColumnMappings.Add("batch", "batch");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -3305,17 +3394,18 @@ namespace WorkerEmail.DanaJaminanTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT a.id, a.businessdate, a.code, a.bank, a.jumlah, a.jangkawaktu, a.tanggalpenempatan, a.jatuhtempo, a.sukubunga, a.bungabruto, a.pph, a.bunga, a.adjustment, a.admin, a.transferdana, a.transferdanakbi, a.penempatan, a.aro, a.multiple, 
-                  a.sequence, a.flag, b.name
-FROM     DanaJaminan AS a INNER JOIN
-                  AnggotaKliring AS b ON a.code = b.code";
+            this._commandCollection[0].CommandText = @"SELECT a.id, a.businessdate, a.code, a.bank, a.jumlah, a.jangkawaktu, a.tanggalpenempatan, a.jatuhtempo, a.sukubunga, a.bungabruto, a.pph, a.bunga, a.adjustment, a.admin, a.transferdana, a.transferdanakbi, a.penempatan, a.aro, a.multiple, a.sequence, a.flag, b.name, a.batch
+FROM   DanaJaminan AS a INNER JOIN
+             AnggotaKliring AS b ON a.code = b.code";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT DISTINCT a.code, b.name\r\nFROM     DanaJaminan AS a INNER JOIN\r\n           " +
-                "       AnggotaKliring AS b ON a.code = b.code\r\nWHERE  (a.businessdate = @bd)";
+            this._commandCollection[1].CommandText = "SELECT DISTINCT a.code, b.name\r\nFROM   DanaJaminan AS a INNER JOIN\r\n             " +
+                "AnggotaKliring AS b ON a.code = b.code\r\nWHERE (a.businessdate = @bd) AND (a.batc" +
+                "h = @batch)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bd", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "businessdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@batch", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "batch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3346,13 +3436,19 @@ FROM     DanaJaminan AS a INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByBd(DanaJaminan.DanaJaminanDataTable dataTable, string bd) {
+        public virtual int FillByBd(DanaJaminan.DanaJaminanDataTable dataTable, string bd, string batch) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((bd == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(bd));
+            }
+            if ((batch == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(batch));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3365,13 +3461,19 @@ FROM     DanaJaminan AS a INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DanaJaminan.DanaJaminanDataTable GetDataByBd(string bd) {
+        public virtual DanaJaminan.DanaJaminanDataTable GetDataByBd(string bd, string batch) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((bd == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(bd));
+            }
+            if ((batch == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(batch));
             }
             DanaJaminan.DanaJaminanDataTable dataTable = new DanaJaminan.DanaJaminanDataTable();
             this.Adapter.Fill(dataTable);
@@ -3521,6 +3623,7 @@ FROM     DanaJaminan AS a INNER JOIN
             tableMapping.ColumnMappings.Add("multiple", "multiple");
             tableMapping.ColumnMappings.Add("sequence", "sequence");
             tableMapping.ColumnMappings.Add("flag", "flag");
+            tableMapping.ColumnMappings.Add("batch", "batch");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -3547,7 +3650,8 @@ FROM     DanaJaminan AS a INNER JOIN
                 "_aro)) AND ((@IsNull_multiple = 1 AND [multiple] IS NULL) OR ([multiple] = @Orig" +
                 "inal_multiple)) AND ((@IsNull_sequence = 1 AND [sequence] IS NULL) OR ([sequence" +
                 "] = @Original_sequence)) AND ((@IsNull_flag = 1 AND [flag] IS NULL) OR ([flag] =" +
-                " @Original_flag)))";
+                " @Original_flag)) AND ((@IsNull_batch = 1 AND [batch] IS NULL) OR ([batch] = @Or" +
+                "iginal_batch)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_businessdate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "businessdate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -3590,10 +3694,12 @@ FROM     DanaJaminan AS a INNER JOIN
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sequence", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sequence", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_flag", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flag", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flag", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flag", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_batch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "batch", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_batch", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "batch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [DanaJaminan] ([businessdate], [code], [bank], [jumlah], [jangkawaktu], [tanggalpenempatan], [jatuhtempo], [sukubunga], [bungabruto], [pph], [bunga], [adjustment], [admin], [transferdana], [transferdanakbi], [penempatan], [aro], [multiple], [sequence], [flag]) VALUES (@businessdate, @code, @bank, @jumlah, @jangkawaktu, @tanggalpenempatan, @jatuhtempo, @sukubunga, @bungabruto, @pph, @bunga, @adjustment, @admin, @transferdana, @transferdanakbi, @penempatan, @aro, @multiple, @sequence, @flag);
-SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jatuhtempo, sukubunga, bungabruto, pph, bunga, adjustment, admin, transferdana, transferdanakbi, penempatan, aro, multiple, sequence, flag FROM DanaJaminan WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [DanaJaminan] ([businessdate], [code], [bank], [jumlah], [jangkawaktu], [tanggalpenempatan], [jatuhtempo], [sukubunga], [bungabruto], [pph], [bunga], [adjustment], [admin], [transferdana], [transferdanakbi], [penempatan], [aro], [multiple], [sequence], [flag], [batch]) VALUES (@businessdate, @code, @bank, @jumlah, @jangkawaktu, @tanggalpenempatan, @jatuhtempo, @sukubunga, @bungabruto, @pph, @bunga, @adjustment, @admin, @transferdana, @transferdanakbi, @penempatan, @aro, @multiple, @sequence, @flag, @batch);
+SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jatuhtempo, sukubunga, bungabruto, pph, bunga, adjustment, admin, transferdana, transferdanakbi, penempatan, aro, multiple, sequence, flag, batch FROM DanaJaminan WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@businessdate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "businessdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3615,6 +3721,7 @@ SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jat
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@multiple", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "multiple", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sequence", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sequence", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flag", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flag", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@batch", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "batch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [DanaJaminan] SET [businessdate] = @businessdate, [code] = @code, [bank] =" +
@@ -3623,33 +3730,34 @@ SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jat
                 "bruto] = @bungabruto, [pph] = @pph, [bunga] = @bunga, [adjustment] = @adjustment" +
                 ", [admin] = @admin, [transferdana] = @transferdana, [transferdanakbi] = @transfe" +
                 "rdanakbi, [penempatan] = @penempatan, [aro] = @aro, [multiple] = @multiple, [seq" +
-                "uence] = @sequence, [flag] = @flag WHERE (([id] = @Original_id) AND ((@IsNull_bu" +
-                "sinessdate = 1 AND [businessdate] IS NULL) OR ([businessdate] = @Original_busine" +
-                "ssdate)) AND ((@IsNull_code = 1 AND [code] IS NULL) OR ([code] = @Original_code)" +
-                ") AND ((@IsNull_bank = 1 AND [bank] IS NULL) OR ([bank] = @Original_bank)) AND (" +
-                "(@IsNull_jumlah = 1 AND [jumlah] IS NULL) OR ([jumlah] = @Original_jumlah)) AND " +
-                "((@IsNull_jangkawaktu = 1 AND [jangkawaktu] IS NULL) OR ([jangkawaktu] = @Origin" +
-                "al_jangkawaktu)) AND ((@IsNull_tanggalpenempatan = 1 AND [tanggalpenempatan] IS " +
-                "NULL) OR ([tanggalpenempatan] = @Original_tanggalpenempatan)) AND ((@IsNull_jatu" +
-                "htempo = 1 AND [jatuhtempo] IS NULL) OR ([jatuhtempo] = @Original_jatuhtempo)) A" +
-                "ND ((@IsNull_sukubunga = 1 AND [sukubunga] IS NULL) OR ([sukubunga] = @Original_" +
-                "sukubunga)) AND ((@IsNull_bungabruto = 1 AND [bungabruto] IS NULL) OR ([bungabru" +
-                "to] = @Original_bungabruto)) AND ((@IsNull_pph = 1 AND [pph] IS NULL) OR ([pph] " +
-                "= @Original_pph)) AND ((@IsNull_bunga = 1 AND [bunga] IS NULL) OR ([bunga] = @Or" +
-                "iginal_bunga)) AND ((@IsNull_adjustment = 1 AND [adjustment] IS NULL) OR ([adjus" +
-                "tment] = @Original_adjustment)) AND ((@IsNull_admin = 1 AND [admin] IS NULL) OR " +
-                "([admin] = @Original_admin)) AND ((@IsNull_transferdana = 1 AND [transferdana] I" +
-                "S NULL) OR ([transferdana] = @Original_transferdana)) AND ((@IsNull_transferdana" +
-                "kbi = 1 AND [transferdanakbi] IS NULL) OR ([transferdanakbi] = @Original_transfe" +
-                "rdanakbi)) AND ((@IsNull_penempatan = 1 AND [penempatan] IS NULL) OR ([penempata" +
-                "n] = @Original_penempatan)) AND ((@IsNull_aro = 1 AND [aro] IS NULL) OR ([aro] =" +
-                " @Original_aro)) AND ((@IsNull_multiple = 1 AND [multiple] IS NULL) OR ([multipl" +
-                "e] = @Original_multiple)) AND ((@IsNull_sequence = 1 AND [sequence] IS NULL) OR " +
-                "([sequence] = @Original_sequence)) AND ((@IsNull_flag = 1 AND [flag] IS NULL) OR" +
-                " ([flag] = @Original_flag)));\r\nSELECT id, businessdate, code, bank, jumlah, jang" +
-                "kawaktu, tanggalpenempatan, jatuhtempo, sukubunga, bungabruto, pph, bunga, adjus" +
-                "tment, admin, transferdana, transferdanakbi, penempatan, aro, multiple, sequence" +
-                ", flag FROM DanaJaminan WHERE (id = @id)";
+                "uence] = @sequence, [flag] = @flag, [batch] = @batch WHERE (([id] = @Original_id" +
+                ") AND ((@IsNull_businessdate = 1 AND [businessdate] IS NULL) OR ([businessdate] " +
+                "= @Original_businessdate)) AND ((@IsNull_code = 1 AND [code] IS NULL) OR ([code]" +
+                " = @Original_code)) AND ((@IsNull_bank = 1 AND [bank] IS NULL) OR ([bank] = @Ori" +
+                "ginal_bank)) AND ((@IsNull_jumlah = 1 AND [jumlah] IS NULL) OR ([jumlah] = @Orig" +
+                "inal_jumlah)) AND ((@IsNull_jangkawaktu = 1 AND [jangkawaktu] IS NULL) OR ([jang" +
+                "kawaktu] = @Original_jangkawaktu)) AND ((@IsNull_tanggalpenempatan = 1 AND [tang" +
+                "galpenempatan] IS NULL) OR ([tanggalpenempatan] = @Original_tanggalpenempatan)) " +
+                "AND ((@IsNull_jatuhtempo = 1 AND [jatuhtempo] IS NULL) OR ([jatuhtempo] = @Origi" +
+                "nal_jatuhtempo)) AND ((@IsNull_sukubunga = 1 AND [sukubunga] IS NULL) OR ([sukub" +
+                "unga] = @Original_sukubunga)) AND ((@IsNull_bungabruto = 1 AND [bungabruto] IS N" +
+                "ULL) OR ([bungabruto] = @Original_bungabruto)) AND ((@IsNull_pph = 1 AND [pph] I" +
+                "S NULL) OR ([pph] = @Original_pph)) AND ((@IsNull_bunga = 1 AND [bunga] IS NULL)" +
+                " OR ([bunga] = @Original_bunga)) AND ((@IsNull_adjustment = 1 AND [adjustment] I" +
+                "S NULL) OR ([adjustment] = @Original_adjustment)) AND ((@IsNull_admin = 1 AND [a" +
+                "dmin] IS NULL) OR ([admin] = @Original_admin)) AND ((@IsNull_transferdana = 1 AN" +
+                "D [transferdana] IS NULL) OR ([transferdana] = @Original_transferdana)) AND ((@I" +
+                "sNull_transferdanakbi = 1 AND [transferdanakbi] IS NULL) OR ([transferdanakbi] =" +
+                " @Original_transferdanakbi)) AND ((@IsNull_penempatan = 1 AND [penempatan] IS NU" +
+                "LL) OR ([penempatan] = @Original_penempatan)) AND ((@IsNull_aro = 1 AND [aro] IS" +
+                " NULL) OR ([aro] = @Original_aro)) AND ((@IsNull_multiple = 1 AND [multiple] IS " +
+                "NULL) OR ([multiple] = @Original_multiple)) AND ((@IsNull_sequence = 1 AND [sequ" +
+                "ence] IS NULL) OR ([sequence] = @Original_sequence)) AND ((@IsNull_flag = 1 AND " +
+                "[flag] IS NULL) OR ([flag] = @Original_flag)) AND ((@IsNull_batch = 1 AND [batch" +
+                "] IS NULL) OR ([batch] = @Original_batch)));\r\nSELECT id, businessdate, code, ban" +
+                "k, jumlah, jangkawaktu, tanggalpenempatan, jatuhtempo, sukubunga, bungabruto, pp" +
+                "h, bunga, adjustment, admin, transferdana, transferdanakbi, penempatan, aro, mul" +
+                "tiple, sequence, flag, batch FROM DanaJaminan WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@businessdate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "businessdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3671,6 +3779,7 @@ SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jat
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@multiple", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "multiple", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sequence", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sequence", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flag", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flag", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@batch", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "batch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_businessdate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "businessdate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_businessdate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "businessdate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3712,6 +3821,8 @@ SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jat
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sequence", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sequence", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_flag", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flag", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flag", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flag", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_batch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "batch", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_batch", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "batch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3729,13 +3840,14 @@ SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jat
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DanaJaminan.*\r\nFROM     DanaJaminan";
+            this._commandCollection[0].CommandText = "SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jatu" +
+                "htempo, sukubunga, bungabruto, pph, bunga, adjustment, admin, transferdana, tran" +
+                "sferdanakbi, penempatan, aro, multiple, sequence, flag, batch\r\nFROM   DanaJamina" +
+                "n";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT id, businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jatuhtempo, sukubunga, bungabruto, pph, bunga, adjustment, admin, transferdana, transferdanakbi, penempatan, aro, multiple, sequence, flag
-FROM     DanaJaminan
-WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd) AND  (penempatan = @penempatan)";
+            this._commandCollection[1].CommandText = @"SELECT adjustment, admin, aro, bank, batch, bunga, bungabruto, businessdate, code, flag, id, jangkawaktu, jatuhtempo, jumlah, multiple, penempatan, pph, sequence, sukubunga, tanggalpenempatan, transferdana, transferdanakbi FROM DanaJaminan WHERE (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir) AND (code = @cd) AND (penempatan = @penempatan)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tglawal", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "tanggalpenempatan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tglakhir", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "jatuhtempo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3893,7 +4005,8 @@ WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd)
                     string Original_aro, 
                     string Original_multiple, 
                     global::System.Nullable<int> Original_sequence, 
-                    string Original_flag) {
+                    string Original_flag, 
+                    string Original_batch) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_businessdate.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -4055,6 +4168,14 @@ WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd)
                 this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[40].Value = ((string)(Original_flag));
             }
+            if ((Original_batch == null)) {
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[42].Value = ((string)(Original_batch));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4095,7 +4216,8 @@ WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd)
                     string aro, 
                     string multiple, 
                     global::System.Nullable<int> sequence, 
-                    string flag) {
+                    string flag, 
+                    string batch) {
             if ((businessdate.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(businessdate.Value));
             }
@@ -4216,6 +4338,12 @@ WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd)
             else {
                 this.Adapter.InsertCommand.Parameters[19].Value = ((string)(flag));
             }
+            if ((batch == null)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(batch));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4257,6 +4385,7 @@ WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd)
                     string multiple, 
                     global::System.Nullable<int> sequence, 
                     string flag, 
+                    string batch, 
                     int Original_id, 
                     global::System.Nullable<global::System.DateTime> Original_businessdate, 
                     string Original_code, 
@@ -4278,6 +4407,7 @@ WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd)
                     string Original_multiple, 
                     global::System.Nullable<int> Original_sequence, 
                     string Original_flag, 
+                    string Original_batch, 
                     int id) {
             if ((businessdate.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(businessdate.Value));
@@ -4399,168 +4529,182 @@ WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd)
             else {
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(flag));
             }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_id));
-            if ((Original_businessdate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_businessdate.Value));
+            if ((batch == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(batch));
+            }
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_id));
+            if ((Original_businessdate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((System.DateTime)(Original_businessdate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             if ((Original_code == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_code));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_code));
             }
             if ((Original_bank == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_bank));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_bank));
             }
             if ((Original_jumlah.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((decimal)(Original_jumlah.Value));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((decimal)(Original_jumlah.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             if ((Original_jangkawaktu.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_jangkawaktu.Value));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_jangkawaktu.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             if ((Original_tanggalpenempatan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_tanggalpenempatan.Value));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_tanggalpenempatan.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             if ((Original_jatuhtempo.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((System.DateTime)(Original_jatuhtempo.Value));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((System.DateTime)(Original_jatuhtempo.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             if ((Original_sukubunga.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((decimal)(Original_sukubunga.Value));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((decimal)(Original_sukubunga.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             if ((Original_bungabruto.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((decimal)(Original_bungabruto.Value));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((decimal)(Original_bungabruto.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             if ((Original_pph.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((decimal)(Original_pph.Value));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((decimal)(Original_pph.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
             }
             if ((Original_bunga.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((decimal)(Original_bunga.Value));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((decimal)(Original_bunga.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
             }
             if ((Original_adjustment.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((decimal)(Original_adjustment.Value));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((decimal)(Original_adjustment.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
             }
             if ((Original_admin.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((decimal)(Original_admin.Value));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((decimal)(Original_admin.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
             }
             if ((Original_transferdana.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((decimal)(Original_transferdana.Value));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((decimal)(Original_transferdana.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
             }
             if ((Original_transferdanakbi.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((decimal)(Original_transferdanakbi.Value));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((decimal)(Original_transferdanakbi.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
             }
             if ((Original_penempatan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((decimal)(Original_penempatan.Value));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((decimal)(Original_penempatan.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
             }
             if ((Original_aro == null)) {
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_aro));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_aro));
             }
             if ((Original_multiple == null)) {
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_multiple));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(Original_multiple));
             }
             if ((Original_sequence.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((int)(Original_sequence.Value));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((int)(Original_sequence.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[59].Value = global::System.DBNull.Value;
             }
             if ((Original_flag == null)) {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[61].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((string)(Original_flag));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((string)(Original_flag));
             }
-            this.Adapter.UpdateCommand.Parameters[61].Value = ((int)(id));
+            if ((Original_batch == null)) {
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[63].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((string)(Original_batch));
+            }
+            this.Adapter.UpdateCommand.Parameters[64].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4602,6 +4746,7 @@ WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd)
                     string multiple, 
                     global::System.Nullable<int> sequence, 
                     string flag, 
+                    string batch, 
                     int Original_id, 
                     global::System.Nullable<global::System.DateTime> Original_businessdate, 
                     string Original_code, 
@@ -4622,8 +4767,9 @@ WHERE  (tanggalpenempatan = @tglawal) AND (jatuhtempo = @tglakhir AND code =@cd)
                     string Original_aro, 
                     string Original_multiple, 
                     global::System.Nullable<int> Original_sequence, 
-                    string Original_flag) {
-            return this.Update(businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jatuhtempo, sukubunga, bungabruto, pph, bunga, adjustment, admin, transferdana, transferdanakbi, penempatan, aro, multiple, sequence, flag, Original_id, Original_businessdate, Original_code, Original_bank, Original_jumlah, Original_jangkawaktu, Original_tanggalpenempatan, Original_jatuhtempo, Original_sukubunga, Original_bungabruto, Original_pph, Original_bunga, Original_adjustment, Original_admin, Original_transferdana, Original_transferdanakbi, Original_penempatan, Original_aro, Original_multiple, Original_sequence, Original_flag, Original_id);
+                    string Original_flag, 
+                    string Original_batch) {
+            return this.Update(businessdate, code, bank, jumlah, jangkawaktu, tanggalpenempatan, jatuhtempo, sukubunga, bungabruto, pph, bunga, adjustment, admin, transferdana, transferdanakbi, penempatan, aro, multiple, sequence, flag, batch, Original_id, Original_businessdate, Original_code, Original_bank, Original_jumlah, Original_jangkawaktu, Original_tanggalpenempatan, Original_jatuhtempo, Original_sukubunga, Original_bungabruto, Original_pph, Original_bunga, Original_adjustment, Original_admin, Original_transferdana, Original_transferdanakbi, Original_penempatan, Original_aro, Original_multiple, Original_sequence, Original_flag, Original_batch, Original_id);
         }
     }
     

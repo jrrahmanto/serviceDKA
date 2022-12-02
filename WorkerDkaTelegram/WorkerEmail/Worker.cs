@@ -104,12 +104,12 @@ namespace WorkerEmail
                 if (text == "/reportdanajaminan")
                 {
                     monitoringServices("DKA_BotTelegram", "generate report dana jaminan", "10.10.10.99", "Live");
-                    Bot.SendTextMessageAsync(message.Chat.Id, "_#report dana jaminan# Please reply business date\n{yyyy-mm-dd}" + "_", ParseMode.Markdown);
+                    Bot.SendTextMessageAsync(message.Chat.Id, "_#report dana jaminan# Please reply upload date\n{yyyy-mm-dd}\n{batch}" + "_", ParseMode.Markdown);
                 }
                 if (text == "/sendreport")
                 {
                     monitoringServices("DKA_BotTelegram", "generate report dana jaminan", "10.10.10.99", "Live");
-                    Bot.SendTextMessageAsync(message.Chat.Id, "_#send report dana jaminan# Please reply business date\n{yyyy-mm-dd}" + "_", ParseMode.Markdown);
+                    Bot.SendTextMessageAsync(message.Chat.Id, "_#send report dana jaminan# Please reply upload date\n{yyyy-mm-dd}\n{batch}" + "_", ParseMode.Markdown);
                 }
             }
             if (message.Type == MessageType.Document)
@@ -133,16 +133,17 @@ namespace WorkerEmail
             try
             {
                 Bot.SendTextMessageAsync(chat_id, "_Generate start_", ParseMode.Markdown);
-
+                var date = msg.Split("\n")[0];
+                var batch = msg.Split("\n")[1];
                 var dr = new DanaJaminanTableAdapters.DanaJaminanTableAdapter();
-                var dt = dr.GetDataByBd(msg);
+                var dt = dr.GetDataByBd(date, batch);
                 List<string> filePaths = new List<string>();
                 if (dt.Count != 0)
                 {
                     foreach (var item in dt)
                     {
                         var code = item.code;
-                        string path = getReportDanaJaminanSSRSWord("RptDanaJaminan", " &businessdate=" + msg + "&code=" + code, item.name, "DanaJaminan");
+                        string path = getReportDanaJaminanSSRSWord("RptDanaJaminan", " &businessdate=" + date + "&code=" + code + "&batch=" + batch, item.name, "DanaJaminan");
                         filePaths.Add(path);
                     }
                 }
@@ -166,16 +167,17 @@ namespace WorkerEmail
             try
             {
                 Bot.SendTextMessageAsync(chat_id, "_Send report start_", ParseMode.Markdown);
-
+                var date = msg.Split("\n")[0];
+                var batch = msg.Split("\n")[1];
                 var dr = new DanaJaminanTableAdapters.DanaJaminanTableAdapter();
-                var dt = dr.GetDataByBd(msg);
+                var dt = dr.GetDataByBd(date,batch);
                 List<string> filePaths = new List<string>();
                 if (dt.Count != 0)
                 {
                     foreach (var item in dt)
                     {
                         var code = item.code;
-                        string path = getReportDanaJaminanSSRSWord("RptDanaJaminan", " &businessdate=" + msg + "&code=" + code, item.name, "DanaJaminan");
+                        string path = getReportDanaJaminanSSRSWord("RptDanaJaminan", " &businessdate=" + date + "&code=" + code + "&batch=" + batch, item.name, "DanaJaminan");
                         var dt_send = new DanaJaminanTableAdapters.SendEmailTableAdapter();
                         var dr_send = dt_send.GetData(item.code);
                         if (dr_send.Count != 0)
@@ -234,7 +236,7 @@ namespace WorkerEmail
                 IronXL.License.LicenseKey = "IRONXL.PTKLIRINGBERJANGKAINDONESIA.IRO211213.9250.23127.312112-E8D7155B28-DDUBZAO2CK6SZS6-NAGUHRNBVLNI-FJUITVDBUOBQ-3XCIXF7ITTXJ-7W7ND3MR2RG5-K24FCU-LNCDCWWFX2WIEA-PROFESSIONAL.SUB-2GOTUI.RENEW.SUPPORT.13.DEC.2022";
                 WorkBook workbook = WorkBook.Load(path);
                 WorkSheet sheet = workbook.WorkSheets.First();
-                string[] data = sheet["A:R"].ToString().Split("\r\n");
+                string[] data = sheet["A:O"].ToString().Split("\r\n");
                 List<data_csv> dataCsv = new List<data_csv>();
                 for (int i = 0; i < data.Length; i++)
                 {
@@ -253,18 +255,18 @@ namespace WorkerEmail
                         {
                             code = newdata[1],
                             bank = newdata[2],
-                            jumlah = newdata[5],
-                            jangkawaktu = newdata[6],
-                            tanggalpenempatan = newdata[7],
-                            jatuhtempo = newdata[8],
-                            sukubunga = Convert.ToDecimal(newdata[9]) * 100,
-                            bungabruto = newdata[10],
-                            pph = newdata[11],
-                            bunga = newdata[12],
-                            admin = newdata[13],
-                            transferdana = newdata[15],
-                            transferdanakbi = newdata[16],
-                            penempatan = newdata[17]
+                            jumlah = newdata[3],
+                            jangkawaktu = newdata[4],
+                            tanggalpenempatan = newdata[5],
+                            jatuhtempo = newdata[6],
+                            sukubunga = Convert.ToDecimal(newdata[7]) * 100,
+                            bungabruto = newdata[8],
+                            pph = newdata[9],
+                            bunga = newdata[10],
+                            admin = newdata[11],
+                            transferdana = newdata[12],
+                            penempatan = newdata[13],
+                            batch = newdata[14]
                         });
 
                     }
@@ -276,10 +278,26 @@ namespace WorkerEmail
                     var count = dt.Count();
                     if (count == 0)
                     {
-                        dr_insert.Insert(DateTime.Now.Date, item.code, item.bank, Convert.ToDecimal(item.jumlah), Convert.ToInt32(item.jangkawaktu), Convert.ToDateTime(item.tanggalpenempatan), Convert.ToDateTime(item.jatuhtempo), item.sukubunga, Convert.ToDecimal(item.bungabruto), Convert.ToDecimal(item.pph), Convert.ToDecimal(item.bunga), 0, Convert.ToDecimal(item.admin), Convert.ToDecimal(item.transferdana), Convert.ToDecimal(item.transferdanakbi), Convert.ToDecimal(item.penempatan), "T", "T", 1, "1");
+                        dr_insert.Insert(DateTime.Now.Date, item.code, item.bank, Convert.ToDecimal(item.jumlah), Convert.ToInt32(item.jangkawaktu), Convert.ToDateTime(item.tanggalpenempatan), Convert.ToDateTime(item.jatuhtempo), item.sukubunga, Convert.ToDecimal(item.bungabruto), Convert.ToDecimal(item.pph), Convert.ToDecimal(item.bunga), 0, 0, Convert.ToDecimal(item.transferdana), 0, Convert.ToDecimal(item.penempatan), "T", "T", 1, "1", item.batch);
                     }
                     else
                     {
+                        dt[0].bank = item.bank;
+                        dt[0].jumlah = Convert.ToDecimal(item.jumlah);
+                        dt[0].jangkawaktu = Convert.ToInt32(item.jangkawaktu);
+                        dt[0].tanggalpenempatan = Convert.ToDateTime(item.tanggalpenempatan);
+                        dt[0].jatuhtempo = Convert.ToDateTime(item.jatuhtempo);
+                        dt[0].sukubunga = item.sukubunga;
+                        dt[0].bungabruto = Convert.ToDecimal(item.bungabruto);
+                        dt[0].pph = Convert.ToDecimal(item.pph);
+                        dt[0].bunga = Convert.ToDecimal(item.bunga);
+                        dt[0].adjustment = 0;
+                        dt[0].admin = 0;
+                        dt[0].transferdana = Convert.ToDecimal(item.transferdana);
+                        dt[0].batch = item.batch;
+
+                        dr_insert.Update(dt);
+
                         Bot.SendTextMessageAsync(chat_id, "_Data sudah pernah di input " + DateTime.Now.ToString("HH:mm:ss") + "_", ParseMode.Markdown);
                     }
                 }
@@ -387,7 +405,7 @@ namespace WorkerEmail
             public string multiple { get; set; }
             public string sequence { get; set; }
             public string flag { get; set; }
-
+            public string batch { get; set; }
 
         }
         private static string monitoringServices(string servicename, string servicedescription, string servicelocation, string appstatus)
